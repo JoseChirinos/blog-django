@@ -1,0 +1,3 @@
+version django 1.9
+user: liseth
+pass: liseth123

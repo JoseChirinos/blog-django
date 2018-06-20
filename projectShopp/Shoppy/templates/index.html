@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Django MVT</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style>
+        h1 a{
+            color: seagreen;
+            font-family: 'Lobster';
+            margin-left: 350px;
+            margin-top: 100px;
+
+        }
+        .page-header {
+            background-color: seagreen;
+            margin-top: 0;
+            padding: 20px 20px 20px 40px;
+        }
+
+        .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+            color: #ffffff;
+            font-size: 36pt;
+            text-decoration: none;
+        }
+
+        .content {
+            margin-left: 40px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Lobster', cursive;
+        }
+
+        .date {
+            float: right;
+            color: #828282;
+        }
+
+        .save {
+            float: right;
+        }
+
+        .post-form textarea, .post-form input {
+            width: 100%;
+        }
+
+        .top-menu, .top-menu:hover, .top-menu:visited {
+            color: #ffffff;
+            float: right;
+            font-size: 26pt;
+            margin-right: 20px;
+        }
+
+        .post {
+            margin-bottom: 70px;
+        }
+
+        .post h1 a, .post h1 a:visited {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+<div class="page-header">
+    <h1><a href="/">Django Modelo - Vista and Template</a></h1>
+    <h4 style="text-align: right"><a href="/product/new" style="color: whitesmoke; text-align: right">New products</a></h4>
+    <h4 style="text-align: right"><a href="/admin" style="color: whitesmoke; text-align: right">Admin</a></h4>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

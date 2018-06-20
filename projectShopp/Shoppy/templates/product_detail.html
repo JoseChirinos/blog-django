@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+{% block content %}
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <style>
+        img {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h1 class="panel-title">{{ product.name }}</h1>
+                 </div>
+                <div class="panel-body">
+                    <font face="Comic Sans MS,arial,verdana">{{ product.description }}</font>
+                    <br>
+
+                    <font face="Comic Sans MS,arial,verdana">
+                        {{ product.category }}
+                    </font>
+                    <center>
+                        <img src="{{ product.image.url }}" alt="" align="center">
+                    </center>
+
+                    <font face="Comic Sans MS,arial,verdana" color="#2e8b57" ><h2 style="text-align: right">{{ product.price }} Bs.</h2></font>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+{% endblock %}

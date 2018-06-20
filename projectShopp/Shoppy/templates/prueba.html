@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    {% for pr in product %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h1 class="panel-title"><a href="product/{{ pr.id }}">{{ pr.name }}</a></h1>
+                    </div>
+                    <div class="panel-body">
+                        <font face="Comic Sans MS,arial,verdana">{{ pr.description }}</font>
+                        <br>
+                        <center>
+                            <img src="{{ pr.image.url }}" alt="" align="center">
+                        </center>
+
+                        <font face="Comic Sans MS,arial,verdana" color="#2e8b57" ><h2 style="text-align: right">{{ pr.price }} Bs.</h2></font>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    {% endfor %}
+
+
+{% endblock %}
