@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <main class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <h1>Nuevo Post</h1>
+          <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-primary">
+              Guardar
+            </button>
+          </form>
+        </div>
+      </div>
+  </main>
+  {% endblock content %}

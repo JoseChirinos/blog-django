@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PostList</title>
+  <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static '/css/font-lato.css' %}">
+  <link rel="stylesheet" href="{% static '/css/font-material.css' %}">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Post con Django</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">
+              <i class="material-icons">list_alt</i>
+              Lista de Post
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'post_new' %}">
+              <i class="material-icons">note_add</i> Nuevo Post
+            </a>
+          </li>
+        </ul>
+        <span>
+          <a class="nav-link text-light" href="/admin">
+            <i class="material-icons">supervised_user_circle</i>
+            Admin
+            <span class="sr-only">(current)</span>
+          </a>
+        </span>
+      </div>
+    </nav>
+    <br><br><br>
+  {% block content %}
+  {% endblock %}
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/delete.js' %}"></script>
+</body>
+</html>

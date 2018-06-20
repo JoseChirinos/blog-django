@@ -1,0 +1,36 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% load static %}
+  <main class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-8">
+            <h1>
+              {{ post.title }}
+            </h1>
+            <h5>
+              <span class="badge badge-pill badge-primary">
+                Autor: {{ post.author }}
+              </span>
+            </h5>
+            <h6 class="card-text text-muted">
+              {{ post.published_date }}
+            </h6>
+            <p>
+              {{ post.text }}
+            </p>
+            <div class="text-right">
+              <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-dark text-right">
+                <i class="material-icons">edit</i>
+                editar
+              </a>
+              <a href="javascript:deletePost('{% url 'post_delete' pk=post.pk %}')" class="btn btn-danger text-right">
+                <i class="material-icons">delete</i>
+                eliminar
+              </a>
+              
+            </div>
+        </div>
+      </div>
+  </main>
+  {% endblock content %}
